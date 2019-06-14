@@ -32,6 +32,15 @@ class Plateau(Tk):
             
         #Fin du Moment galère #######
 
+        if self.model.Premier_Tour:
+            self.entry = tk.Entry(self).place(x=1050,y=250)
+            self.button = tk.Button(self, text="Get", command=self.on_button)
+            self.button.pack()
+            self.entry.pack()
+
+    def on_button(self):
+        print(self.entry.get())
+
  
 
 
